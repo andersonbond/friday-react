@@ -1,0 +1,7 @@
+{
+  "name": "fridayUI",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
