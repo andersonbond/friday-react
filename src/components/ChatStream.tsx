@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { IonButton, IonIcon } from '@ionic/react';
 import axios from 'axios';
 import './ChatStream.css';
-import friday from '../assets/friday2.png';
+import BaseAILogo from '../assets/baseup_logo2.png';
 import loader from '../assets/loader.gif';
 import { play } from 'ionicons/icons';
 
@@ -107,24 +107,18 @@ const ChatStream = () => {
       <div className="version-info">
         <div>
           <h3>
-              CPDO AI v0.1
+              BaseAI v0.1
           </h3>
           <p>
             Notes
           </p>
           <ul>
             <li>
-              <strong>Public Use:</strong> Data shared may be used for public access and benefit, subject to applicable laws and regulations.
-            </li>
-            <li>
-              <strong>Non-storage of Personal Information:</strong> We do not store any personal information shared through this application.
-            </li>
-            <li>
               <strong>SSL Encryption:</strong> To safeguard the confidentiality of user communications, this application utilizes SSL (Secure Sockets Layer) encryption. This encryption protocol ensures that all data exchanged between users and the system is securely transmitted over the internet.
             </li>
           </ul>
           <p>
-            We are dedicated to upholding the standards of data privacy and security. If you have any questions or concerns regarding our data policy, please contact us at Davao City Planning Office, Davao City.
+            We are dedicated to upholding the standards of data privacy and security. If you have any questions or concerns regarding our data policy, please contact us at hello@baseai.com.ph
           </p>
         </div>
       </div>
@@ -136,8 +130,8 @@ const ChatStream = () => {
             <div key={index} className={`message ${msg.sender === 'friday' ? 'from-friday' : ''}`}>
                 {msg.sender === 'friday' && (
                   <div className="friday-label">
-                    <img src={friday} alt="Friday" className='friday-icon' />
-                    CPDO AI
+                    <img src={BaseAILogo} alt="Friday" className='friday-icon' />
+                    BaseAI
                   </div>
                 )}
                   {msg.sender === 'user' && (
@@ -171,7 +165,7 @@ const ChatStream = () => {
           ))}
           {typing && (
             <div className="loader">
-              <img src={friday} className='friday-icon' /><img src={loader} alt="Loading..." />
+              <img src={BaseAILogo} className='friday-icon' /><img src={loader} alt="Loading..." />
             </div>
           )}
         </div>
@@ -183,8 +177,8 @@ const ChatStream = () => {
             onChange={(e) => setInput(e.target.value)}
             onKeyPress={handleKeyPress}
             disabled={typing}
-            aria-label="Message CPDO AI..."
-            placeholder='Message CPDO AI...'
+            aria-label="Message BaseAI..."
+            placeholder='Message BaseAI...'
           />
           <IonButton color="warning" fill="solid" onClick={sendMessage} disabled={typing}>
             Send <IonIcon slot="end" icon={play}></IonIcon>
