@@ -45,10 +45,11 @@ const ChatStream = () => {
   }, [messages]);
 
   // https://fri.websonicph.xyz/api/v1/chat
+  //http://localhost:8000/api/v1/chat/
 
   async function processGPT(chatMessages: any) {
     axios
-    .post(`http://localhost:8000/api/v1/chat/`, { chatMessages }, {
+    .post(`https://fri.websonicph.xyz/baseaiapi/v1/chat`, { chatMessages }, {
       headers: {
         // Authorization: `Token ${props.user.token}`,
         "Content-Type": "application/json",
