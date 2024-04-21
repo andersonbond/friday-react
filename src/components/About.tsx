@@ -7,7 +7,7 @@ const About: React.FC = () => {
       <h1>
         <img src={BaseAILogo} alt="Friday" className='friday-icon-md' style={{ verticalAlign: 'middle' }} />BaseAI
       </h1>
-      <ul className='ol-2'>
+      <ul className='ol-2 text-18'>
         <li>
           🥷🏻
           <span className='ml-8'>BaseAI delivers Retrieval Augmented Generation (RAG) and AI Agents to support business operations.</span>
