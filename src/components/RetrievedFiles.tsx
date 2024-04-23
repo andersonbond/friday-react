@@ -7,7 +7,7 @@ const RetrievedFiles: React.FC = () => {
 
   useEffect(() => {
     // Fetch data from your Node.js API
-    fetch(`${REMOTE_API_URL}/v1/files`)
+    fetch(`${REMOTE_API_URL}/api/v1/files`)
       .then(response => response.json())
       .then(data => setFiles(data))
       .catch(error => console.error('Error fetching data:', error));
@@ -15,7 +15,7 @@ const RetrievedFiles: React.FC = () => {
 
   const openFile = (fileName: string) => {
     // Open the file in a new tab
-    window.open(`${REMOTE_API_URL}/v1/files/${fileName}`, '_blank');
+    window.open(`${REMOTE_API_URL}/api/v1/files/${fileName}`, '_blank');
   };
 
   const FileCard = (
