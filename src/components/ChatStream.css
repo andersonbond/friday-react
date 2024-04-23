@@ -164,4 +164,7 @@ p {
   .version-info {
     display: none;
   }
+  .chatbox, .messages {
+    min-width: unset;
+  }
 }

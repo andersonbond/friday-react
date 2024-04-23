@@ -1,3 +1,50 @@
 .file-section {
-    max-width: 480px;;
+    max-width: 480px;
+    height: 70%;
+    overflow: auto;
+}
+
+.burger-icon {
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+.burger-icon .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px 0;
+}
+
+
+@media (min-width: 350px) and (max-width: 767px) { 
+    
+    .retrieved-files-container-lg {
+        display: none;
+    }
+    .burger-icon {
+        display: block; 
+    }
+    
+    .retrieved-files-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 80%;
+    background-color: #fff;
+    z-index: 999;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    }
+    
+    .retrieved-files-container.show {
+    width: 100%;
+    }
+
 }
