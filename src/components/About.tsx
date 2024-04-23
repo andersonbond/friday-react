@@ -10,7 +10,7 @@ const About: React.FC = () => {
       <ul className='ol-2 text-18'>
         <li>
           🥷🏻
-          <span className='ml-8'>BaseAI delivers Retrieval Augmented Generation (RAG) and AI Agents to support business operations.</span>
+          <span className='ml-8'>BaseAI delivers Retrieval Augmented Generation (RAG) System and AI Agents to support business operations.</span>
         </li>
         <li>
           🤖 
@@ -21,7 +21,7 @@ const About: React.FC = () => {
         <li>
           🚀
           <span className="ml-8 text-18">
-            Utilizes cutting-edge technologies for data accessibility.
+            Utilizes cutting-edge technologies.
           </span>
         </li>
       </ul>

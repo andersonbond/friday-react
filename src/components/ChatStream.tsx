@@ -12,6 +12,8 @@ import ReactMarkdown from 'react-markdown';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { a11yDark } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
+import { REMOTE_API_URL, LOCAL_API_URL } from '../config/properties';
+
 const ChatStream = () => {
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -49,7 +51,7 @@ const ChatStream = () => {
 
   async function processGPT(chatMessages: any) {
     axios
-    .post(`https://fri.websonicph.xyz/baseaiapi/v1/chat`, { chatMessages }, {
+    .post(`${REMOTE_API_URL}/v1/chat`, { chatMessages }, {
       headers: {
         // Authorization: `Token ${props.user.token}`,
         "Content-Type": "application/json",
