@@ -10,12 +10,14 @@ p {
 
 .chatbox {
     width: 100%;
+    min-width: 720px;
     border: 1px solid #fff;
     border-radius: 5px;
     overflow: hidden;
 }
 
 .messages {
+  min-width: 720px;
   height: 86vh;
   width: 100%;
   overflow-y: auto;
@@ -160,5 +162,8 @@ p {
 @media (min-width: 350px) and (max-width: 767px) {
   .version-info {
     display: none;
+  }
+  .chatbox, .messages {
+    min-width: unset;
   }
 }

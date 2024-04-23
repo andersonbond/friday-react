@@ -21,10 +21,10 @@ const RetrievedFiles: React.FC = () => {
   const FileCard = (
     <div className='m-10 p-16'>
       <h1>📘 Files</h1>
-      <ul className='ol-2 text-18'>
+      <ul>
         {/* Map over the files array to render each file */}
         {files.map((file, index) => (
-          <li key={index} onClick={() => openFile(file)} style={{ cursor: 'pointer' }}>
+          <li key={index} onClick={() => openFile(file)} style={{ cursor: 'pointer', color: 'blue' }}>
             {file}
           </li>
         ))}
